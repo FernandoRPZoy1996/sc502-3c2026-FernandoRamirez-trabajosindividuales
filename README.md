@@ -1,1 +1,1 @@
-# sc502-3c2024-FernandoRamirez-trabajosindividuales
+# sc502-3c2026-FernandoRamirez-trabajosindividuales
