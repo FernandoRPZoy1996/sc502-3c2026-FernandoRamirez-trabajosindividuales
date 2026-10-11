@@ -339,13 +339,6 @@ a {
   font-size: 0.78rem;
 }
 
-.sample-note {
-  margin: 18px 0 0;
-  color: #8296a2;
-  font-size: 0.75rem;
-  text-align: center;
-}
-
 .contact-section {
   display: flex;
   width: min(calc(100% - 40px), 1030px);
