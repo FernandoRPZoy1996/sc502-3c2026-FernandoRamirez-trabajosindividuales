@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Formulario de registro creado como práctica de HTML y CSS.">
+  <title>Formulario de registro</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="page-heading">
+    <h1>Formulario de registro</h1>
+    <p>Completa el formulario con la información solicitada.</p>
+  </header>
+
+  <main>
+    <form method="post" action="https://register-demo.freecodecamp.org" enctype="multipart/form-data">
+      <fieldset>
+        <label for="first-name">Nombre:
+          <input id="first-name" name="first-name" type="text" autocomplete="given-name" required>
+        </label>
+        <label for="last-name">Apellidos:
+          <input id="last-name" name="last-name" type="text" autocomplete="family-name" required>
+        </label>
+        <label for="email">Correo electrónico:
+          <input id="email" name="email" type="email" autocomplete="email" required>
+        </label>
+        <label for="new-password">Crea una contraseña:
+          <input id="new-password" name="new-password" type="password" pattern="[a-z0-5]{8,}" autocomplete="new-password" aria-describedby="password-help" required>
+        </label>
+        <small id="password-help">Usa al menos 8 caracteres: letras minúsculas y números del 0 al 5.</small>
+      </fieldset>
+
+      <fieldset>
+        <legend class="visually-hidden">Tipo de cuenta y términos</legend>
+        <label for="personal-account">
+          <input id="personal-account" class="inline" type="radio" name="account-type" value="personal" checked>
+          Cuenta personal
+        </label>
+        <label for="business-account">
+          <input id="business-account" class="inline" type="radio" name="account-type" value="business">
+          Cuenta de empresa
+        </label>
+        <label for="terms-and-conditions">
+          <input id="terms-and-conditions" class="inline" name="terms-and-conditions" type="checkbox" value="accepted" required>
+          Acepto los <a href="https://www.freecodecamp.org/news/terms-of-service/">términos y condiciones</a>.
+        </label>
+      </fieldset>
+
+      <fieldset>
+        <legend class="visually-hidden">Información adicional</legend>
+        <label for="profile-picture">Sube una foto de perfil:
+          <input id="profile-picture" type="file" name="profile-picture" accept="image/*">
+        </label>
+        <label for="age">Edad:
+          <input id="age" type="number" name="age" min="13" max="120">
+        </label>
+        <label for="referrer">¿Cómo te enteraste de nosotros?
+          <select id="referrer" name="referrer">
+            <option value="">(selecciona una opción)</option>
+            <option value="news">Noticias de freeCodeCamp</option>
+            <option value="youtube">Canal de YouTube de freeCodeCamp</option>
+            <option value="forum">Foro de freeCodeCamp</option>
+            <option value="other">Otro</option>
+          </select>
+        </label>
+        <label for="bio">Cuéntanos un poco sobre ti:
+          <textarea id="bio" name="bio" rows="3" cols="30" placeholder="Me gusta aprender cosas nuevas..."></textarea>
+        </label>
+      </fieldset>
+
+      <input class="submit-button" type="submit" value="Enviar">
+    </form>
+    <p class="form-note">Formulario de práctica. Usa información ficticia al probar el envío.</p>
+  </main>
+</body>
+</html>
